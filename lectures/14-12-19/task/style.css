@@ -1,0 +1,44 @@
+body > div {
+    margin-bottom: 10px;
+}
+
+.first_block {
+    font-size: 1rem;
+}
+
+.second_block {
+    font-size: 2rem;
+}
+
+.third_block {
+    font-size: 3rem;
+}
+
+div > div:nth-child(7n-6) {
+    background: red;
+}
+
+div > div:nth-child(7n-5) {
+    background: orange;
+}
+
+div > div:nth-child(7n-4) {
+    background: yellow;
+}
+
+div > div:nth-child(7n-3) {
+    background: green;
+}
+
+div > div:nth-child(7n-2) {
+    background: lightblue;
+}
+
+div > div:nth-child(7n-1) {
+    background: blue;
+}
+
+div > div:nth-child(7n) {
+    background: violet;
+}
+

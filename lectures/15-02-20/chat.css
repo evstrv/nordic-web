@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic");
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+form > input {
+  border: 1px solid #5181b8;
+  border-radius: 3px;
+  margin-bottom: .6rem;
+  font-size: .9rem;
+  text-align: center;
+}
+
+form > input[type=submit] {
+  background-color: #5181b8;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  max-width: 100px;
+  margin: 0 auto .6rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+main section {
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+main section.users {
+  border: 1px solid #5181b8;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 200px;
+  height: 50%;
+  min-height: 600px;
+  overflow-x: hidden;
+}
+
+main section.users > .user {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: .9rem;
+}
+
+main section.users > .user:hover, main section.users > .user.active {
+  background-color: #5181b8;
+  cursor: pointer;
+  color: white;
+}
+
+main section.chat {
+  width: 60%;
+  min-width: 400px;
+  height: 50%;
+  min-height: 600px;
+}
+
+main section.chat > .messages {
+  width: 100%;
+  height: calc(100% - 43.8px);
+  border: 1px solid #5181b8;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: .9rem;
+}
+
+main section.chat > .messages > div {
+  max-width: 45%;
+  background-color: #5181b8;
+  color: white;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+main section.chat > .messages > div.from {
+  margin-left: auto;
+}
+
+main section.chat > .messages > div.to {
+  margin-right: auto;
+}
+
+main section.chat > .messages > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+main section.chat > .messages > div.time {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: none;
+  color: #5181b8;
+}
+
+main section.chat > .message {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section.chat > .message > textarea {
+  resize: none;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  border: 1px solid #5181b8;
+  border-radius: 0 0 0 10px;
+  width: 100%;
+}
+
+main section.chat > .message > textarea:focus {
+  outline: none;
+}
+
+main section.chat > .message > button {
+  background-color: #5181b8;
+  border: none;
+  border-radius: 0 0 10px 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+main section.chat > .message > button:focus {
+  outline: none;
+}
+
+main section.show {
+  display: block;
+}
+/*# sourceMappingURL=chat.css.map */

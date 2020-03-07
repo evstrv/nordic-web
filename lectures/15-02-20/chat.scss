@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic');
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;  
+}
+
+$color: rgb(81, 129, 184);
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+    
+    > input {
+        border: 1px solid $color;
+        border-radius: 3px;
+        margin-bottom: .6rem;
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    > input[type=submit] {
+        background-color: $color; 
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        max-width: 100px;
+        margin: 0 auto .6rem;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+
+    section {
+        height: 100%;
+        margin-bottom: 1rem;
+
+        &.users {
+            border: 1px solid $color;
+            border-radius: 10px;
+            width: 30%;
+            min-width: 200px;
+            height: 50%;
+            min-height: 600px;
+            overflow-x: hidden;
+            // display: none;
+
+            > .user {
+                padding: 1rem 2rem;
+                text-align: center;
+                font-size: .9rem;
+
+                &:hover, &.active {
+                    background-color: $color;
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+        }
+
+        &.chat {
+            width: 60%;
+            min-width: 400px;
+            height: 50%;
+            min-height: 600px;
+            // display: none;
+
+            > .messages {
+                width: 100%;
+                height: calc(100% - 43.8px);
+                border: 1px solid $color;
+                border-bottom: none;
+                border-radius: 10px 10px 0 0;
+                box-sizing: border-box;
+                display: flex;
+                align-items: flex-end;
+                padding: 1rem;
+                flex-direction: column;
+                justify-content: flex-end;
+                overflow-y: auto;
+                overflow-x: hidden;
+                font-size: .9rem;
+
+                > div {
+                    max-width: 45%;
+                    background-color: $color;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 0.8rem 1rem;
+
+                    &.from {
+                        margin-left: auto;
+                    }
+
+                    &.to {
+                        margin-right: auto;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    &.time {
+                        margin: 0 auto;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        background: none;
+                        color: $color;
+                    }
+                }
+            }
+
+            > .message {
+                width: 100%;
+                display: flex;
+
+                > textarea {
+                    resize: none;
+                    border: none;
+                    font-size: 1.1rem;
+                    line-height: 1.2;
+                    border: 1px solid $color;
+                    border-radius: 0 0 0 10px;
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                > button {
+                    background-color: $color;
+                    border: none;
+                    border-radius: 0 0 10px 0;
+                    color:  white;
+                    text-transform: uppercase;
+                    font-size: .9rem;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+}

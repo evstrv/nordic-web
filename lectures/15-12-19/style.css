@@ -1,0 +1,53 @@
+.wrapper{
+    background-color: lightblue;
+    display: flex;
+    /* flex-direction – направление расположения элементов */
+    flex-direction: row;
+    /* justify-content – расположение элементов по горизонтали*/
+    /* align-items – расположение элементов по вертикали*/
+    height: 2000px;
+    /* flex-wrap – перенос элементов */
+}
+
+.wrapper > div:first-child{
+    /* position – расположение элементов в потоке вывода их */
+    /* position: relative; */
+    /* left: 20px; */
+}
+
+.wrapper > div:first-child > div{
+    width: 25px;
+    height: 25px;
+    background: black;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 12.5px);
+}
+
+.wrapper > div > span{
+    border: 1px solid black;
+}
+
+.first{
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+
+.second{
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+}
+
+.three{
+    background-color: seagreen;
+    width: 200px;
+    height: 200px;
+}
+
+.four{
+    background-color: cyan;
+    width: 200px;
+    height: 200px;
+}

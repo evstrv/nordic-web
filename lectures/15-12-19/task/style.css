@@ -1,0 +1,117 @@
+.wrapper {
+    background: lightblue;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.wrapper > div {
+    width: 40%;
+    min-width: 250px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper > div > h1 {
+    margin: 10px 0;
+}
+
+.wrapper > div > table {
+    margin: 10px 0;
+}
+
+.wrapper > div > table > thead > tr > th:first-child {
+    background: black;
+    width: 10px;
+}
+
+.wrapper > div > table > tbody > tr > td {
+    position: relative;
+}
+
+.wrapper > div > table > tbody > tr > td > div {
+    background: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 2.5px);
+    top: calc(50% - 2.5px);   
+}
+
+table thead tr th {
+    padding: 0 10px;
+    text-align: center;
+}
+
+table tbody tr td {
+    text-align: center;
+    padding: 5px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* table thead tr th, 
+table tbody tr td {
+    border: 1px solid black;
+} */
+
+.wrapper > div:nth-child(2n) {
+    flex-direction: column-reverse;
+}
+
+/* thead */
+
+table thead tr th:first-child {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table thead tr th:nth-child(2) {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table thead tr th:nth-child(3) {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table thead tr th:last-child {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}   
+
+/* tbody */
+
+table tbody tr:first-child {
+    border-bottom: 1px solid black;
+}
+
+table tbody tr:nth-child(2) {
+    border-bottom: 1px solid black;
+}
+
+table tbody tr td:nth-child(2) {
+    border-left: 1px solid black;
+}
+
+table tbody tr td:nth-child(3) {
+    border-left: 1px solid black;
+}
+
+table tbody tr td:last-child {
+    border-left: 1px solid black;
+}

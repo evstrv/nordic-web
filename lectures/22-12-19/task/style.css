@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header > div {
+    width: 350px;
+    height: 350px;
+    background: black;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+main { 
+    display: flex;
+    justify-content: center;
+}
+
+main > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+    margin-top: 70px;
+}

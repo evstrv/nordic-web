@@ -1,0 +1,93 @@
+.wrapper {
+    margin: 20px;
+}
+
+#f_div {
+    color: red;
+}
+
+#s_div {
+    color: green;
+}
+
+/* > – берем все элементы, которые являются потомком первого элемента */
+/* :nth-child() – номер элемента, к которому будет применено свойство; указывается либо число, либо через формулу (2n – четные, 2n-1 – нечетные),
+либо через два ключевых слова even (четные) и odd (нечетные) */
+/* :first-child – только первый элемент, :last-child – последний элемент по выбранному селектору */
+/* :not() – все элементы, не содержащие () */
+
+.wrapper > div:not(.t_div) {
+    margin: 5px;
+    background: yellow;
+}
+
+/* точнее использовать class > class > class и т.д., чем использовать class > div > div */
+/* div.nested – ищем только тег div с классом nested, к которому применятся стили, а не ко всем тегам с классом nested */
+
+.wrapper > .t_div > div.nested {
+    background: red;
+}
+
+.wrapper > .t_div > span.nested.italic {
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+/* + – следующй элемент после указанного селектора */
+/* !important – это свойство перебивает свойства других селекторов */
+
+.wrapper > .t_div > span.nested.italic + span {
+    color: pink;
+}
+
+/* ~ – все элементы после указанного селектора */
+/* 0010      0010          0021          0001 */
+
+.wrapper > .t_div > span.nested.italic ~ span {
+    color: grey !important;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.italic {
+    font-style: italic;;
+    font-size: 1.1em;
+}
+
+table thead tr th {
+    padding-right: 10px;
+    border: 1px solid black;
+}
+
+table tbody tr td {
+    text-align: center;
+    padding: 10px 0;
+}
+
+table {
+    /* схлопывание отступов на таблицах */
+    border-collapse: collapse;
+    background: url(https://yastatic.net/s3/home/logos/share/share-logo_ru.png);
+    background-repeat: no-repeat;   
+    background-position: center;
+    background-size: 150%;
+}
+
+/* * – любой элемент везде */
+
+table thead tr th, 
+table tbody tr td {
+    border: 1px solid black;
+}
+
+/* table > * > tr > * {
+    border: 1px solid black;
+} */
+
+/* hover – при наведении */
+
+table thead tr th:hover {
+    cursor: pointer;
+}

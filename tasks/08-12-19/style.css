@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    border-bottom: 2px solid black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+div {
+    margin-left: 70px;
+}
